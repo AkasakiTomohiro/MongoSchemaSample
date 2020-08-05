@@ -1,0 +1,26 @@
+{
+  "name": "MongoSchemaSample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkasakiTomohiro/MongoSchemaSample.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AkasakiTomohiro/MongoSchemaSample/issues"
+  },
+  "homepage": "https://github.com/AkasakiTomohiro/MongoSchemaSample#readme",
+  "devDependencies": {
+    "@types/mongoose": "^5.7.34",
+    "mongoose": "^5.9.27",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
+}
