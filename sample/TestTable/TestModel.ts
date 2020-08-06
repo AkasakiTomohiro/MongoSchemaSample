@@ -2,6 +2,7 @@ import mongoose, { Schema } from "mongoose";
 import { MongooseSchema } from "../../index";
 import { ITest } from "./ITest";
 import { ITestDocument } from "./TestDocument";
+import { TestEnumList } from "./TestEnum";
 
 const schema: MongooseSchema<ITest> = {
   name: {
@@ -31,6 +32,11 @@ const schema: MongooseSchema<ITest> = {
       },
     ],
     default: [],
+  },
+  testEnum: {
+    type: String,
+    enum: TestEnumList,
+    required: true,
   },
 };
 

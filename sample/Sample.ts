@@ -25,6 +25,7 @@ import { ITest } from "./TestTable/ITest";
         },
       },
     ],
+    testEnum: "A",
   };
   const testModel = new TestModel(test);
   const result = await testModel.save();
