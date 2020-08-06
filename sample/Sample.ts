@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { TestModel } from "./TestTable/TestSchema";
+import { TestModel } from "./TestTable/TestModel";
 import { ITest } from "./TestTable/ITest";
 
 (async () => {
