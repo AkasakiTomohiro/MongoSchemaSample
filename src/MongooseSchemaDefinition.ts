@@ -6,7 +6,7 @@ type SchemaDefinitionValueType<T = any> =
   | SchemaType;
 
 export type MongooseSchemaDefinition<T> = {
-  readonly [U in keyof T]: T[U] extends (infer R)[]
+  readonly [U in keyof T]-?: T[U] extends (infer R)[]
     ? R extends object
       ? SchemaDefinitionValueType<MongooseSchemaDefinition<R>[]>
       : SchemaDefinitionValueType
