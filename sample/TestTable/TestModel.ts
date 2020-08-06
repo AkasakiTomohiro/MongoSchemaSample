@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import { MongooseSchema } from "../../index";
+import { MongooseSchema } from "../../src/MongooseSchema";
 import { ITest } from "./ITest";
 import { ITestDocument } from "./TestDocument";
 import { TestEnumList } from "./TestEnum";
