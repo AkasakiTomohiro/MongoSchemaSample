@@ -4,7 +4,7 @@ import { ITest } from "./ITest";
 import { ITestDocument } from "./TestDocument";
 import { TestEnumList } from "./TestEnum";
 
-const schema: MongooseSchema<ITest> = {
+const testSchema: MongooseSchema<ITest> = {
   name: {
     type: String,
     required: true,
@@ -42,5 +42,5 @@ const schema: MongooseSchema<ITest> = {
 
 export const TestModel = mongoose.model<ITestDocument>(
   "TestTable",
-  new Schema(schema)
+  new Schema(testSchema)
 );
