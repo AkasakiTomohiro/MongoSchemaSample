@@ -1,10 +1,10 @@
 import mongoose, { Schema } from "mongoose";
-import { MongooseSchema } from "../../src/MongooseSchema";
+import { MongooseSchemaDefinition } from "../../src/MongooseSchemaDefinition";
 import { ITest } from "./ITest";
 import { ITestDocument } from "./TestDocument";
 import { TestEnumList } from "./TestEnum";
 
-const testSchema: MongooseSchema<ITest> = {
+const testSchema: MongooseSchemaDefinition<ITest> = {
   name: {
     type: String,
     required: true,

@@ -10,5 +10,5 @@
     "declaration": true,
     "declarationDir": "./"
   },
-  "files": ["src/MongooseSchema.ts"]
+  "files": ["src/MongooseSchemaDefinition.ts"]
 }
