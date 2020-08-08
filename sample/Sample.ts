@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import { TestModel } from "./TestTable/TestModel";
-import { ITest } from "./TestTable/ITest";
+import { TestCreateDto } from "./TestTable/TestDto";
 
 (async () => {
   mongoose.Promise = global.Promise;
@@ -12,19 +12,9 @@ import { ITest } from "./TestTable/ITest";
     })
     .then(() => console.log("connection successful"));
 
-  const test: ITest = {
+  const test: TestCreateDto = {
     name: "test",
     value: 1,
-    stringList: ["C#", "Typescript"],
-    objectList: [
-      {
-        key: "XXXXX",
-        value: {
-          a: 0,
-          b: 0,
-        },
-      },
-    ],
     testEnum: "A",
   };
   const testModel = new TestModel(test);
