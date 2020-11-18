@@ -5,12 +5,14 @@ type SchemaDefinitionValueType<T = any> =
   | Schema
   | SchemaType;
 
-export type MongooseSchemaDefinition<T> = {
+export type MongooseSchemaDefinitionType<T> = {
   readonly [U in keyof T]-?: T[U] extends (infer R)[]
     ? R extends object
-      ? SchemaDefinitionValueType<MongooseSchemaDefinition<R>[]>
+      ? SchemaDefinitionValueType<MongooseSchemaDefinitionType<R>[]>
       : SchemaDefinitionValueType
     : T[U] extends object
-    ? SchemaDefinitionValueType<MongooseSchemaDefinition<T[U]>>
+    ? SchemaDefinitionValueType<MongooseSchemaDefinitionType<T[U]>> | SchemaDefinitionValueType
     : SchemaDefinitionValueType;
 };
+
+export type MongooseSchemaDefinition<T> = MongooseSchemaDefinitionType<Omit<T, '_id'>>;
